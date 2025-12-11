@@ -30,11 +30,11 @@ def calculate_QFT(signal: list):
     print("Starting QFT computation...")
     qft = QFT.QFT(signal)
 
-    # print("QFT circuit:")
-    # print(qft.draw())
+    print("QFT circuit:")
+    print(qft.draw())
 
-    # print("\nInput (time-domain) amplitudes |x⟩:")
-    # print(qft.time_state.data)
+    print("\nInput (time-domain) amplitudes |x⟩:")
+    print(qft.time_state.data)
 
     service = QiskitRuntimeService()
     backend = service.backend("ibm_torino")

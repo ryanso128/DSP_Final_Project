@@ -34,14 +34,7 @@ class QFT:
         self._time_state = Statevector(self.time_amplitudes)
         self._fourier_state = Statevector.from_instruction(self.qc)
 
-    # -------------------------
-    # Internal manual QFT
-    # -------------------------
     def _manual_qft(self, qubits=None):
-        """
-        In-place QFT on self.qc (no use of qiskit.circuit.library.QFT).
-        Little-endian convention.
-        """
         if qubits is None:
             qubits = list(range(self.qc.num_qubits))
         else:
